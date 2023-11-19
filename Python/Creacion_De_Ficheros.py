@@ -1,30 +1,30 @@
 import os
 
 def Create_file():
-    Nombre_Archivo = input("Ingrese El Nombre Del Archivo Que Deseas Crear: ")
-    with open(Nombre_Archivo, 'w') as Archivo:
-        print("El Archivo Fue Creado De Manera Exitoza.")
+    Nombre_Fichero = input("Ingrese El Nombre Del Fichero Que Deseas Crear: ")
+    with open(Nombre_Fichero, 'w') as Fichero:
+        print("El Fichero Fue Creado De Manera Exitoza.")
 
 def Read_file():
-    Nombre_Archivo = input("Introduzca El Nombre Del Archivo Que Desea Leer: ")
-    with open(Nombre_Archivo, 'r') as Archivo:
-        Contenido = Archivo.read()
-        print("El Contenido Del Archivo Es:")
+    Nombre_Fichero = input("Introduzca El Nombre Del Fichero Que Desea Leer: ")
+    with open(Nombre_Fichero, 'r') as Fichero:
+        Contenido = Fichero.read()
+        print("El Contenido Del Fichero Es:")
         print(Contenido)
 
 def Add_data():
-    Nombre_Archivo = input("Introduce El Nombre Del Archivo Que Desea Modificar: ")
+    Nombre_Fichero = input("Introduce El Nombre Del Fichero Que Desea Modificar: ")
     Elemento = input("Introduce El Elemento Que Desea Agregar: ")
-    with open(Nombre_Archivo, 'a') as Archivo:
+    with open(Nombre_Fichero, 'a') as Fichero:
         Archivo.write(Elemento + "\n")
         print("El Elemento Fue Agregado Exitosamente.")
 
 def Modify_data():
-    Nombre_Archivo = input("Introduce El Nombre Del Archivo Que Deseas Modificar: ")
-    with open(Nombre_Archivo, 'r') as Archivo:
-        Lineas = Archivo.readlines()
+    Nombre_Fichero = input("Introduce El Nombre Del Fichero Que Deseas Modificar: ")
+    with open(Nombre_Fichero, 'r') as Fichero:
+        Lineas = Fichero.readlines()
 
-    print("El Contenido Del Archivo Es : ")
+    print("El Contenido Del Fichero Es : ")
     for i, Linea in enumerate(Lineas):
         print(f"{i}: {Linea}", end='')
 
@@ -32,23 +32,23 @@ def Modify_data():
     Nueva_Linea = input("Introduce La Nueva Línea: ")
     Lineas[Numero_Linea] = Nueva_Linea + "\n"
 
-    with open(Nombre_Archivo, 'w') as Archivo:
-        Archivo.writelines(Lineas)
+    with open(Nombre_Fichero, 'w') as Fichero:
+        Fichero.writelines(Lineas)
         print("Las Líneas Fueron Modificadas Exitosamente.")
 
 def Delete_data():
-    Nombre_Archivo = input("Introduce El Nombre Del Archivo Que Deseas Eliminar: ")
-    os.remove(Nombre_Archivo)
-    print("El Archivo Fue eliminado exitosamente.")
+    Nombre_Fichero = input("Introduce El Nombre Del Fichero Que Deseas Eliminar: ")
+    os.remove(Nombre_Fichero)
+    print("El Fichero Fue eliminado exitosamente.")
 
 while True:
     Menu = ('''  
             Menu 
-        1. Crear Un archivo.
-        2. Leer Un Archivo 
-        3. Agregar Elementos A Un Archivo 
-        4. Modificar Un Archivo 
-        5. Eliminar El Archivo 
+        1. Crear Un Fichero.
+        2. Leer Un Fichero 
+        3. Agregar Elementos A Un Fichero 
+        4. Modificar Un Fichero 
+        5. Eliminar El Fichero 
         6. Salir 
         Selecciona Una Opcion Entre : ''')
     
