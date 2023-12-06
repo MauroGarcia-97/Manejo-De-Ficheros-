@@ -7,7 +7,7 @@ def Create_file():
         print("The File Was Created Successfully.")
 
 def Read_file():
-    File_Name = input("Introduzca El Nombre Del Fichero Que Desea Leer: ")
+    File_Name = input("Enter the Name of the File You Want to Read: ")
     with open(File_Name, 'r') as File:
         Content = File.read()
         print("The Content Of The File Is:")
