@@ -67,7 +67,7 @@ while True:
         case '5':
             Delete_data()
         case '6':
-            print("Coming out...")
+            print("Coming Out...")
             break
         case _:
             print("Invalid Option, Please Try Again.")
